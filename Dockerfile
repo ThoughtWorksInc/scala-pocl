@@ -10,5 +10,6 @@ RUN apt-get update && \
 
 RUN (echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list) && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823 && \
-    apt-get update && apt-get install sbt openjdk-8-jdk-headless openjdk-8-jre openjdk-8-jdk -y && \
+    apt-get update && apt-get install sbt apt-get install sbt openjdk-8-jdk-headless openjdk-8-jre openjdk-8-jdk openjdk-8-jre-headless ca-certificates-java=20161107~bpo8+1
+ -y && \
     rm -rf /var/lib/apt/lists/*

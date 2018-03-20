@@ -2,6 +2,8 @@ FROM popatry/scala-pocl:miniconda3-pocl
 
 LABEL maintainer "Yang Bo <atryyang@thoughtworks.com>"
 
+RUN echo deb http://ftp.debian.org/debian jessie-backports main contrib non-free >> /etc/apt/sources.list
+
 RUN apt-get update && \
     apt-get install apt-transport-https -y && \
     rm -rf /var/lib/apt/lists/*

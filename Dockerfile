@@ -5,7 +5,7 @@ LABEL maintainer "Yang Bo <atryyang@thoughtworks.com>"
 RUN ln -sf /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 
 RUN (conda install -y -c conda-forge pocl || conda install -y -c conda-forge pocl) && \
-    conda clean
+    conda clean --all --yes
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         ocl-icd-opencl-dev \
